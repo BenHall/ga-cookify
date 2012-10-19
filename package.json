@@ -1,0 +1,18 @@
+{
+  "name": "ga-cookify",
+  "version": "0.0.1",
+  "description": "Google Analytics Cookie Parser",
+  "main": "ga-cookify.js",
+  "scripts": {
+    "test": "mocha tests/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BenHall/ga-cookify.git"
+  },
+  "keywords": [
+    "Google Analytics"
+  ],
+  "author": "Ben Hall",
+  "license": "BSD"
+}
