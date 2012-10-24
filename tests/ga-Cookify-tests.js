@@ -7,9 +7,17 @@ describe('GA Cookie Parser', function () {
       __utmb: '69927821.9.10.1350646356',
       __utmc: '69927821',
       __utmz: '69927821.1350029525.34.15.utmcsr=0.0.0.0:3000|utmccn=(referral)|utmcmd=referral|utmcct=/login' };
-  it('return source of request', function (done) {
+
+  it('returns an empty string if cookie does not exist', function(done) {
+    var s = gaCookify.getSourceCookie({});
+    s.should.eql('');
+    done();
+  });
+
+  it('returns source of request', function (done) {
     var s = gaCookify.getSourceCookie(example);
     s.should.eql('0.0.0.0:3000');
     done();
   });
+
 });
